@@ -1,0 +1,106 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7c99e9;
+}
+
+
+.schedule-date {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #333; /* Increased thickness */
+    padding-bottom: 10px;
+}
+
+
+.widget {
+    background-color: #e3d7ef; /* Light lavender background */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+}
+
+h2 {
+    color: #6A4B9E; /* Darker lavender for header text */
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #6A4B9E; /* Darker lavender for labels */
+}
+
+input[type="file"],
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #B39DDB; /* Soft lavender border */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.cute-button {
+    background-color: #7E57C2; /* Lavender purple for the button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    width: auto;
+    margin-top: 20px;
+}
+
+.cute-button:hover {
+    background-color: #9575CD; /* A lighter lavender on hover */
+}
+
+.animation-container {
+    position: relative;
+    display: inline-block;
+}
+
+.note, .heart {
+    position: fixed;
+    bottom: 0;
+    font-size: 24px;
+    animation: floatUp 5s ease-in-out forwards;
+}
+
+.note {
+    color: mediumslateblue; /* Ensuring notes are the correct color */
+}
+
+.heart {
+    color: #FFC0CB; /* Light pink color for hearts */
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100vh); /* Full vertical height to ensure it moves off-screen */
+    }
+}
