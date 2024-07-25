@@ -21,9 +21,13 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
+            position: fixed; /* Keep header fixed */
+            top: 0; /* Position at the top of the page */
+            width: 100%; /* Full width */
+            z-index: 1000; /* Ensure it stays above other elements */
         }
         .schedule {
-            margin: 30px auto;
+            margin: 90px auto 30px; /* Adjust top margin to account for the fixed header */
             width: 90%;
             max-width: 800px;
         }
