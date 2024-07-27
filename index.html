@@ -11,6 +11,7 @@
             color: #fff;
             margin: 0;
             padding: 0;
+            overflow: hidden; /* Prevents scrollbars */
         }
         .header {
             background-color: #FF69B4;
@@ -30,6 +31,8 @@
             margin: 90px auto 30px; /* Adjust top margin to account for the fixed header */
             width: 90%;
             max-width: 800px;
+            position: relative;
+            z-index: 10; /* Ensure schedule stays above the bouncing images */
         }
         .schedule-date {
             font-size: 22px;
@@ -73,6 +76,15 @@
             display: block;
             margin-bottom: 5px;
         }
+        .ball {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            z-index: 1; /* Behind the schedule */
+        }
     </style>
 </head>
 <body>
@@ -81,120 +93,116 @@
     </div>
     <div class="schedule">
         <div class="schedule-date">
-            Sat Jul 27
+            Sun Jul 28
         </div>
-	<a href="https://1stream.eu/title-game/olympic-paris-2024/usa-network-live-stream/9284"
-	class="event" target="_blank">
-            <div class="event-icon">🇺🇸 </div>
+        <a href="https://1stream.eu/title-game/olympic-paris-2024/usa-network-live-stream/9284" class="event" target="_blank">
+            <div class="event-icon">🇺🇸</div>
             <div class="event-details">
-                <div class="event-title">USA SPORTS </div>
-                <div class="event-time">
-                   Showing: Gymnastics 🤸
-                </div>
-            </div>
-        </a>
-
-<a href="https://1stream.eu/title-game/olympic-paris-2024/eurosport-live-stream/9287" class="event" target="_blank">
-            <div class="event-icon">🇪🇺 </div>
-            <div class="event-details">
-                <div class="event-title">EUROSPORTS </div>
-                <div class="event-time">
-			 Showing: Cycling 🚴‍♂️
-                   
-                </div>
-            </div>
-        </a>
-      
-<a href="https://1stream.eu/title-game/olympic-paris-2024/bbc-one-live-stream/9288" class="event" target="_blank">
-            <div class="event-icon">🇬🇧 </div>
-            <div class="event-details">
-                <div class="event-title">BBC 1 </div>
-                <div class="event-time">
-		 Showing: Cycling 🚴‍♂️ 
-                   
-                </div>
-            </div>
-        </a>
- <a href="https://1stream.eu/title-game/olympic-paris-2024/nbc-live-stream/9283" class="event" target="_blank">
-            <div class="event-icon"> 🇺🇸 </div>
-            <div class="event-details">
-                <div class="event-title">NBC </div>
+                <div class="event-title">USA SPORTS</div>
                 <div class="event-time">
                     Showing: Gymnastics 🤸
                 </div>
             </div>
         </a>
-
-        <a href="https://tennistream.com/channel-3v/" class="event" target="_blank">
-            <div class="event-icon">🎾🎾 </div>
+        <a href="https://1stream.eu/title-game/olympic-paris-2024/eurosport-live-stream/9287" class="event" target="_blank">
+            <div class="event-icon">🇪🇺</div>
             <div class="event-details">
-                <div class="event-title">Tennis - Djokovic vs some dude cuz Rune is injured!!! </div>
+                <div class="event-title">EUROSPORTS</div>
+                <div class="event-time">
+                    Showing: Cycling 🚴‍♂️
+                </div>
+            </div>
+        </a>
+        <a href="https://1stream.eu/title-game/olympic-paris-2024/bbc-one-live-stream/9288" class="event" target="_blank">
+            <div class="event-icon">🇬🇧</div>
+            <div class="event-details">
+                <div class="event-title">BBC 1</div>
+                <div class="event-time">
+                    Showing: Cycling 🚴‍♂️
+                </div>
+            </div>
+        </a>
+        <a href="https://1stream.eu/title-game/olympic-paris-2024/nbc-live-stream/9283" class="event" target="_blank">
+            <div class="event-icon">🇺🇸</div>
+            <div class="event-details">
+                <div class="event-title">NBC</div>
+                <div class="event-time">
+                    Showing: Gymnastics 🤸
+                </div>
+            </div>
+        </a>
+        <a href="https://tennistream.com/channel-3v/" class="event" target="_blank">
+            <div class="event-icon">🎾</div>
+            <div class="event-details">
+                <div class="event-title">Tennis - Djokovic vs some dude cuz Rune is injured!!!</div>
                 <div class="event-time">
                     NOWWW
                 </div>
             </div>
         </a>
-         <a href="https://1stream.eu/olympic-tournament-group-b/france-brazil-live-stream/805398" class="event" target="_blank">
-            <div class="event-icon">🏀⛹🏿 </div>
+        <a href="https://1stream.eu/olympic-tournament-group-b/france-brazil-live-stream/805398" class="event" target="_blank">
+            <div class="event-icon">🏀⛹🏿</div>
             <div class="event-details">
-                <div class="event-title">BASKETBALL NOW TOO - SPAIN VS AUSTRALIA!! </div>
+                <div class="event-title">BASKETBALL NOW TOO - SPAIN VS AUSTRALIA!!</div>
                 <div class="event-time">
                     NOWWW
-                </div>
-            </div>
-        </a>
-
-        
-
-
-        <div class="schedule-date">
-            Sun Jul 28
-        </div>
-        <a href="https://tennistream.com/channel-3v/" class="event" target="_blank">
-            <div class="event-icon">🏊‍♂️</div>
-            <div class="event-details">
-                <div class="event-title">Swimming - Men's 400m Freestyle Final</div>
-                <div class="event-time">
-                    John's Time: 2:30AM <br> Anson's Time: 7:30PM
-                </div>
-            </div>
-        </a>
-        <a href="https://tennistream.com/channel-3v/" class="event" target="_blank">
-            <div class="event-icon">🏊‍♀️</div>
-            <div class="event-details">
-                <div class="event-title">Swimming - Women's 400m Freestyle Final</div>
-                <div class="event-time">
-                    John's Time: 3:00AM <br> Anson's Time: 8:00PM
-                </div>
-            </div>
-        </a>
-        <a href="https://tennistream.com/channel-3v/" class="event" target="_blank">
-            <div class="event-icon">🏊‍♂️</div>
-            <div class="event-details">
-                <div class="event-title">Swimming - Men's 4x100m Freestyle Relay Final</div>
-                <div class="event-time">
-                    John's Time: 3:30AM <br> Anson's Time: 8:30PM
-                </div>
-            </div>
-        </a>
-        <a href="https://tennistream.com/channel-3v/" class="event" target="_blank">
-            <div class="event-icon">🏊‍♀️</div>
-            <div class="event-details">
-                <div class="event-title">Swimming - Women's 4x100m Freestyle Relay Final</div>
-                <div class="event-time">
-                    John's Time: 4:00AM <br> Anson's Time: 9:00PM
-                </div>
-            </div>
-        </a>
-         <a href="https://tennistream.com/channel-3v/" class="event" target="_blank">
-            <div class="event-icon">🛹</div>
-            <div class="event-details">
-                <div class="event-title">Skateboarding - Womens's Street Final</div>
-                <div class="event-time">
-                    John's Time: 11:00PM <br> Anson's Time: 4:00PM
                 </div>
             </div>
         </a>
     </div>
+
+    <div id="ball1" class="ball" style="background-image: url('images/image1.jpg');"></div>
+    <div id="ball2" class="ball" style="background-image: url('images/image2.jpg');"></div>
+    <div id="ball3" class="ball" style="background-image: url('images/image3.jpg');"></div>
+    <div id="ball4" class="ball" style="background-image: url('images/image4.jpg');"></div>
+    <div id="ball5" class="ball" style="background-image: url('images/image5.jpg');"></div>
+    <div id="ball6" class="ball" style="background-image: url('images/image6.jpg');"></div>
+    <div id="ball7" class="ball" style="background-image: url('images/image7.jpg');"></div>
+    <div id="ball8" class="ball" style="background-image: url('images/image8.jpg');"></div>
+    <div id="ball9" class="ball" style="background-image: url('images/image9.jpg');"></div>
+    <div id="ball10" class="ball" style="background-image: url('images/image10.jpg');"></div>
+    <div id="ball11" class="ball" style="background-image: url('images/image11.jpg');"></div>
+    <div id="ball12" class="ball" style="background-image: url('images/image12.jpg');"></div>
+    <div id="ball13" class="ball" style="background-image: url('images/image13.jpg');"></div>
+
+    <script>
+        console.log('JavaScript loaded');
+        const balls = document.querySelectorAll('.ball');
+        const ballSpeed = 1.5;
+        const directions = Array.from({ length: balls.length }, () => ({
+            x: Math.random() > 0.5 ? ballSpeed : -ballSpeed,
+            y: Math.random() > 0.5 ? ballSpeed : -ballSpeed,
+        }));
+
+        function updatePositions() {
+            balls.forEach((ball, index) => {
+                let x = ball.offsetLeft;
+                let y = ball.offsetTop;
+                const width = ball.offsetWidth;
+                const height = ball.offsetHeight;
+                const viewportWidth = window.innerWidth;
+                const viewportHeight = window.innerHeight;
+
+                if (x + width >= viewportWidth || x <= 0) {
+                    directions[index].x *= -1;
+                }
+                if (y + height >= viewportHeight || y <= 0) {
+                    directions[index].y *= -1;
+                }
+
+                ball.style.left = `${x + directions[index].x}px`;
+                ball.style.top = `${y + directions[index].y}px`;
+            });
+
+            requestAnimationFrame(updatePositions);
+        }
+
+        balls.forEach(ball => {
+            ball.style.left = `${Math.random() * (window.innerWidth - ball.offsetWidth)}px`;
+            ball.style.top = `${Math.random() * (window.innerHeight - ball.offsetHeight)}px`;
+        });
+
+        updatePositions();
+    </script>
 </body>
 </html>
