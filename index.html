@@ -12,6 +12,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden; /* Prevents scrollbars */
+            position: relative; /* To properly position balls relative to the body */
         }
         .header {
             background-color: #FF69B4;
@@ -78,12 +79,13 @@
         }
         .ball {
             position: absolute;
-            width: 100px;
-            height: 100px;
+            width: 100px; /* Fixed size for balls */
+            height: 100px; /* Fixed size for balls */
             border-radius: 50%;
             background-size: cover;
             background-position: center;
             z-index: 1; /* Behind the schedule */
+            pointer-events: none; /* Ensure balls don't interfere with clicks */
         }
     </style>
 </head>
@@ -151,6 +153,7 @@
         </a>
     </div>
 
+    <!-- Bouncing balls -->
     <div id="ball1" class="ball" style="background-image: url('images/image1.jpg');"></div>
     <div id="ball2" class="ball" style="background-image: url('images/image2.jpg');"></div>
     <div id="ball3" class="ball" style="background-image: url('images/image3.jpg');"></div>
@@ -168,7 +171,7 @@
     <script>
         console.log('JavaScript loaded');
         const balls = document.querySelectorAll('.ball');
-        const ballSpeed = 1.5;
+        const ballSpeed = 2; // Adjust speed as needed
         const directions = Array.from({ length: balls.length }, () => ({
             x: Math.random() > 0.5 ? ballSpeed : -ballSpeed,
             y: Math.random() > 0.5 ? ballSpeed : -ballSpeed,
