@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>❤️ For My Love ❤️</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #000;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Prevents scrollbars */
-            position: relative; /* To properly position balls relative to the body */
-        }
+       body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden; /* This will only hide horizontal overflow, allowing vertical scrolling */
+}
         .header {
             background-color: #FF69B4;
             color: #000;
@@ -23,17 +23,17 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
-            position: fixed; /* Keep header fixed */
-            top: 0; /* Position at the top of the page */
-            width: 100%; /* Full width */
-            z-index: 1000; /* Ensure it stays above other elements */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
         .schedule {
-            margin: 90px auto 30px; /* Adjust top margin to account for the fixed header */
+            margin: 90px auto 30px;
             width: 90%;
             max-width: 800px;
             position: relative;
-            z-index: 10; /* Ensure schedule stays above the bouncing images */
+            z-index: 10;
         }
         .schedule-date {
             font-size: 22px;
@@ -79,13 +79,41 @@
         }
         .ball {
             position: absolute;
-            width: 100px; /* Fixed size for balls */
-            height: 100px; /* Fixed size for balls */
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             background-size: cover;
             background-position: center;
-            z-index: 1; /* Behind the schedule */
-            pointer-events: none; /* Ensure balls don't interfere with clicks */
+            z-index: 1;
+            pointer-events: none;
+        }
+        .event-table {
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+            border-collapse: collapse;
+            color: #fff;
+            background-color: #111;
+            border: 1px solid #444;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .event-table th, .event-table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #444;
+        }
+        .event-table th {
+            background-color: #FF69B4;
+            color: #000;
+            font-size: 20px;
+        }
+        .event-table td a {
+            color: #FF69B4;
+            text-decoration: none;
+        }
+        .event-table td a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -153,6 +181,45 @@
         </a>
     </div>
 
+    <table class="event-table">
+        <thead>
+            <tr>
+                <th>Event</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>4x100m Freestyle Relay</td>
+                <td><a href="https://www.youtube.com/watch?v=xJwiZsZPdl8" target="_blank">Watch</a></td>
+            </tr>
+            <tr>
+                <td>USA Gymnastics Team</td>
+                <td><a href="https://www.youtube.com/watch?v=-srBXLP9TQA" target="_blank">Watch</a></td>
+            </tr>
+            <tr>
+                <td>OSAKA OUT</td>
+                <td><a href="https://www.youtube.com/watch?v=I-VrwniWdgw" target="_blank">Watch</a></td>
+            </tr>
+            <tr>
+                <td>HK GOLD</td>
+                <td><a href="https://www.youtube.com/watch?v=74UD2A8YNL0" target="_blank">Watch</a></td>
+            </tr>
+            <tr>
+                <td>Tennis</td>
+                <td><a href="https://www.youtube.com/watch?v=wi1gaxi-6SA" target="_blank">Watch</a></td>
+            </tr>
+            <tr>
+                <td>Swimming</td>
+                <td><a href="https://www.youtube.com/watch?v=Odo0acEMa7c" target="_blank">Watch</a></td>
+            </tr>
+            <tr>
+                <td>DREAM TEAM NADALCARAZ</td>
+                <td><a href="https://www.youtube.com/watch?v=bQTD53JQGr8" target="_blank">Watch</a></td>
+            </tr>
+        </tbody>
+    </table>
+
     <!-- Bouncing balls -->
     <div id="ball1" class="ball" style="background-image: url('images/image1.jpg');"></div>
     <div id="ball2" class="ball" style="background-image: url('images/image2.jpg');"></div>
@@ -166,12 +233,11 @@
     <div id="ball10" class="ball" style="background-image: url('images/image10.jpg');"></div>
     <div id="ball11" class="ball" style="background-image: url('images/image11.jpg');"></div>
     <div id="ball12" class="ball" style="background-image: url('images/image12.jpg');"></div>
-    <div id="ball13" class="ball" style="background-image: url('images/image13.heic');"></div>
 
     <script>
         console.log('JavaScript loaded');
         const balls = document.querySelectorAll('.ball');
-        const ballSpeed = 2; // Adjust speed as needed
+        const ballSpeed = 2;
         const directions = Array.from({ length: balls.length }, () => ({
             x: Math.random() > 0.5 ? ballSpeed : -ballSpeed,
             y: Math.random() > 0.5 ? ballSpeed : -ballSpeed,
