@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>❤️ For My Love ❤️</title>
     <style>
-       body {
-    font-family: 'Arial', sans-serif;
-    background-color: #000;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    overflow-x: hidden; /* This will only hide horizontal overflow, allowing vertical scrolling */
-}
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow-x: hidden;
+        }
+
         .header {
             background-color: #FF69B4;
             color: #000;
@@ -28,13 +30,51 @@
             width: 100%;
             z-index: 1000;
         }
+
+        .countdown {
+            background-color: #FFB6C1;
+            color: #000;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 100px auto 20px;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 25px;
+            box-shadow: 0px 0px 15px rgba(255, 182, 193, 0.7);
+            position: relative;
+            z-index: 999;
+            animation: bounce 1.5s infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .countdown::before,
+        .countdown::after {
+            content: '💖';
+            font-size: 30px;
+            margin: 0 10px;
+        }
+
         .schedule {
-            margin: 90px auto 30px;
+            margin: 140px auto 30px;
             width: 90%;
             max-width: 800px;
             position: relative;
             z-index: 10;
         }
+
         .schedule-date {
             font-size: 22px;
             text-align: center;
@@ -42,6 +82,7 @@
             border-bottom: 4px solid #333;
             padding-bottom: 10px;
         }
+
         .event {
             margin: 20px 0;
             padding: 15px;
@@ -54,39 +95,47 @@
             text-decoration: none;
             color: inherit;
         }
+
         .event:hover {
             background-color: #222;
         }
+
         .event-icon {
             margin-right: 15px;
             font-size: 30px;
         }
+
         .event-details {
             flex-grow: 1;
         }
+
         .event-title {
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 5px;
         }
+
         .event-time {
             font-size: 16px;
             color: #ddd;
         }
+
         .event-time br {
             display: block;
             margin-bottom: 5px;
         }
+
         .ball {
             position: absolute;
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             background-size: cover;
             background-position: center;
             z-index: 1;
             pointer-events: none;
         }
+
         .event-table {
             width: 90%;
             max-width: 800px;
@@ -98,36 +147,47 @@
             border-radius: 10px;
             overflow: hidden;
         }
-        .event-table th, .event-table td {
+
+        .event-table th,
+        .event-table td {
             padding: 15px;
             text-align: center;
             border: 1px solid #444;
         }
+
         .event-table th {
             background-color: #FF69B4;
             color: #000;
             font-size: 20px;
         }
+
         .event-table td a {
             color: #FF69B4;
             text-decoration: none;
         }
+
         .event-table td a:hover {
             text-decoration: underline;
         }
+
     </style>
 </head>
+
 <body>
     <div class="header">
         Anson and John's Olympic Watching Schedule ❤️
     </div>
+
+    <div class="countdown" id="countdown">
+        9 days until you're back my love! 💖
+    </div>
+
     <div class="schedule">
         <div class="schedule-date">
-            Mon Jul 29
+            Fri Aug 9
         </div>
 
-
-<a href="https://cracksports.me/olympics-2024-streams" class="event" target="_blank">
+        <a href="https://cracksports.me/olympics-2024-streams" class="event" target="_blank">
             <div class="event-icon">🌎</div>
             <div class="event-details">
                 <div class="event-title">EVERYTHING LINK!!!</div>
@@ -137,21 +197,11 @@
             </div>
         </a>
 
-<a href="https://cracksports.me/olympics-2024/paris-2024-ongoing-coverage-live-stream" class="event" target="_blank">
-            <div class="event-icon">🇺🇸</div>
-            <div class="event-details">
-                <div class="event-title">24/7 Olympics Coverage</div>
-                <div class="event-time">
-                    Showing: recap everything
-                </div>
-            </div>
-        </a>
         <a href="https://1stream.eu/title-game/olympic-paris-2024/usa-network-live-stream/9284" class="event" target="_blank">
             <div class="event-icon">🇺🇸</div>
             <div class="event-details">
                 <div class="event-title">USA SPORTS</div>
                 <div class="event-time">
-                    Showing: Gymnastics 🤸
                 </div>
             </div>
         </a>
@@ -160,7 +210,6 @@
             <div class="event-details">
                 <div class="event-title">EUROSPORTS</div>
                 <div class="event-time">
-                    Showing: Cycling 🚴‍♂️
                 </div>
             </div>
         </a>
@@ -169,7 +218,6 @@
             <div class="event-details">
                 <div class="event-title">BBC 1</div>
                 <div class="event-time">
-                    Showing: Cycling 🚴‍♂️
                 </div>
             </div>
         </a>
@@ -178,71 +226,46 @@
             <div class="event-details">
                 <div class="event-title">NBC</div>
                 <div class="event-time">
-                    Showing: Gymnastics 🤸
                 </div>
             </div>
         </a>
 
-<a href="https://www.rthk.hk/tv" class="event" target="_blank">
-            <div class="event-icon">🇭🇰</div>
-            <div class="event-details">
-                <div class="event-title">RTHK</div>
-                <div class="event-time">
-                    Showing: Hong Kong Athletes
-                </div>
-            </div>
-        </a>
-        <a href="https://tennistream.com/channel-3v/" class="event" target="_blank">
-            <div class="event-icon">🎾</div>
-            <div class="event-details">
-                <div class="event-title">Tennis</div>
-                <div class="event-time">
-                    NOWWW
-                </div>
-            </div>
-        </a>
-     
-
-    <table class="event-table">
-        <thead>
-            <tr>
-                <th>Event Recap</th>
-                <th>Link</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>4x100m Freestyle Relay</td>
-                <td><a href="https://www.youtube.com/watch?v=xJwiZsZPdl8" target="_blank">Watch</a></td>
-            </tr>
-            <tr>
-                <td>USA Gymnastics Team</td>
-                <td><a href="https://www.youtube.com/watch?v=-srBXLP9TQA" target="_blank">Watch</a></td>
-            </tr>
-            <tr>
-                <td>OSAKA OUT</td>
-                <td><a href="https://www.youtube.com/watch?v=I-VrwniWdgw" target="_blank">Watch</a></td>
-            </tr>
-            <tr>
-                <td>HK GOLD</td>
-                <td><a href="https://www.youtube.com/watch?v=74UD2A8YNL0" target="_blank">Watch</a></td>
-            </tr>
-            <tr>
-                <td>Tennis</td>
-                <td><a href="https://www.youtube.com/watch?v=wi1gaxi-6SA" target="_blank">Watch</a></td>
-            </tr>
-            <tr>
-                <td>Swimming</td>
-                <td><a href="https://www.youtube.com/watch?v=Odo0acEMa7c" target="_blank">Watch</a></td>
-            </tr>
-            <tr>
-                <td>DREAM TEAM NADALCARAZ</td>
-                <td><a href="https://www.youtube.com/watch?v=bQTD53JQGr8" target="_blank">Watch</a></td>
-            </tr>
-        </tbody>
-    </table>
-
-    <!-- Bouncing balls -->
+        <table class="event-table">
+            <thead>
+                <tr>
+                    <th>Event Recap</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>USA vs Serbia Basketball Semi Finals</td>
+                    <td><a href="https://www.youtube.com/watch?v=2q_e58AvSyE" target="_blank">Watch</a></td>
+                </tr>
+                <tr>
+                    <td>Sydney McLaughlin-Levrone 400m Hurdles</td>
+                    <td><a href="https://www.youtube.com/watch?v=dpuqYd5qz94" target="_blank">Watch</a></td>
+                </tr>
+                <tr>
+                    <td>France vs Germany Basketball Semi Finals</td>
+                    <td><a href="https://www.youtube.com/watch?v=eirttDm5kwU" target="_blank">Watch</a></td>
+                </tr>
+                <tr>
+                    <td>200m Men's Athletics</td>
+                    <td><a href="https://www.youtube.com/watch?v=dkB8hcye_8I" target="_blank">Watch</a></td>
+                </tr>
+                <tr>
+                    <td>Climbing</td>
+                    <td><a href="https://www.youtube.com/watch?v=WLerT_hWDAo" target="_blank">Watch</a></td>
+                </tr>
+                <tr>
+                    <td>400m Crazy Comeback</td>
+                    <td><a href="https://www.youtube.com/watch?v=QkmcEL-C25I" target="_blank">Watch</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+ <!-- Bouncing balls -->
     <div id="ball1" class="ball" style="background-image: url('images/image1.jpg');"></div>
     <div id="ball2" class="ball" style="background-image: url('images/image2.jpg');"></div>
     <div id="ball3" class="ball" style="background-image: url('images/image3.jpg');"></div>
@@ -296,4 +319,22 @@
         updatePositions();
     </script>
 </body>
+</html>
+   
+
+        // Countdown Logic
+        function updateCountdown() {
+            const endDate = new Date('2024-08-18');
+            const currentDate = new Date();
+            const timeDifference = endDate - currentDate;
+
+            const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+            document.getElementById('countdown').textContent = `💖 ${daysRemaining} days until you're back my love! 💖`;
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000 * 60 * 60); // Update every hour
+    </script>
+</body>
+
 </html>
